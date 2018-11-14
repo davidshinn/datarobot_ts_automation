@@ -72,4 +72,4 @@ df_predictions['datetime_recorded'] = datetime.datetime.now().isoformat()
 df_predictions['project_id'] = project_id
 df_predictions['model_id'] = model_id
 
-df_predictions.to_sql(s.db_table_name_predictions, conn, index=False)
+df_predictions.to_sql(s.db_table_name_predictions, conn, index=False, if_exists='append')
